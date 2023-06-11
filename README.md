@@ -72,7 +72,7 @@ NOTICE: This is never a recommended use of git. This will overwrite changes on t
 Sometimes, Git can't make your change to a remote repository without losing commits. When this happens, your push is refused.
 
 If another person has pushed to the same branch as you, Git won't be able to push your changes:
-
+```
 $ git push origin main
 > To https://github.com/USERNAME/REPOSITORY.git
 >  ! [rejected]        main -> main (non-fast-forward)
@@ -81,16 +81,17 @@ $ git push origin main
 > Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 > 'Note about fast-forwards' section of 'git push --help' for details.
 You can fix this by fetching and merging the changes made on the remote branch with the changes that you have made locally:
-
+```
+```
 $ git fetch origin
 # Fetches updates made to an online repository
 $ git merge origin YOUR_BRANCH_NAME
 # Merges updates made online with your local work
 Or, you can simply use git pull to perform both commands at once:
-
+```
 $ git pull origin YOUR_BRANCH_NAME
 # Grabs online updates and merges them with your local work
-
+```
 
 
 
